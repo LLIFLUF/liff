@@ -69,7 +69,28 @@
       const context = liff.getContext()
 
       if (context.type !== 'none' && context.type !== 'external') {
+        // limit 5 messages bubbles
         await liff.sendMessages([
+          {
+            'type': 'sticker',
+            'stickerId': 1,
+            'packageId': 1
+          },
+          {
+            'type': 'sticker',
+            'stickerId': 1,
+            'packageId': 1
+          },
+          {
+            'type': 'sticker',
+            'stickerId': 1,
+            'packageId': 1
+          },
+          {
+            'type': 'sticker',
+            'stickerId': 1,
+            'packageId': 1
+          },
           {
             'type': 'sticker',
             'stickerId': 1,
