@@ -72,6 +72,11 @@
     }
 
     async function getUserProfile() {
+      const profile = await liff.getProfile()
+      document.getElementById('pictureUrl').append(profile.pictureUrl)
+      document.getElementById('userId').append(profile.userId)
+      document.getElementById('displayName').append(profile.displayName)
+      document.getElementById('statusMessage').append(profile.statusMessage)
     }
 
     function getEnvironment() {
@@ -93,12 +98,6 @@
 
       document.getElementById('accessToken').append(liff.getAccessToken())
 
-      const profile = liff.getProfile()
-      document.getElementById('pictureUrl').append(profile.pictureUrl)
-      document.getElementById('userId').append(profile.userId)
-      document.getElementById('displayName').append(profile.displayName)
-      document.getElementById('statusMessage').append(profile.statusMessage)
-      
       // document.getElementById('type').append(liff.getType())
       // document.getElementById('viewType').append(liff.getViewType())
       // document.getElementById('utouId').append(liff.getUtouId())
