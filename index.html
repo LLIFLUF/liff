@@ -78,9 +78,11 @@
       document.getElementById('os').append(liff.getOS())
       document.getElementById('language').append(liff.getLanguage())
       document.getElementById('version').append(liff.getVersion())
-      document.getElementById('isInClient').append(liff.isInClient())
 
-      if (liff.getIsInClient()) {
+      const isInClient = liff.isInClient()
+      document.getElementById('isInClient').append(isInClient)
+
+      if (isInClient) {
         document.getElementById('btnLogOut').style.display = 'none'
         document.getElementById('btnShare').style.display = 'none'
       } else {
@@ -89,11 +91,14 @@
         document.getElementById('btnClose').style.display = 'none'
       }
 
-      // document.getElementById('accessToken').append(liff.getAccessToken())
-      // document.getElementById('pictureUrl').append(liff.getPictureUrl())
-      // document.getElementById('userId').append(liff.getUserId())
-      // document.getElementById('displayName').append(liff.getDisplayName())
-      // document.getElementById('statusMessage').append(liff.getStatusMessage())
+      document.getElementById('accessToken').append(liff.getAccessToken())
+
+      const profile = liff.getProfile()
+      document.getElementById('pictureUrl').append(profile.pictureUrl)
+      document.getElementById('userId').append(profile.userId)
+      document.getElementById('displayName').append(profile.displayName)
+      document.getElementById('statusMessage').append(profile.statusMessage)
+      
       // document.getElementById('type').append(liff.getType())
       // document.getElementById('viewType').append(liff.getViewType())
       // document.getElementById('utouId').append(liff.getUtouId())
