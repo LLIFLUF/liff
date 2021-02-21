@@ -69,6 +69,12 @@
     }
 
     function getContext() {
+      const context = liff.getContext()
+      document.getElementById('type').append(context.type)
+      document.getElementById('viewType').append(context.viewType)
+      document.getElementById('utouId').append(context.utouId)
+      document.getElementById('roomId').append(context.roomId)
+      document.getElementById('groupId').append(context.groupId)
     }
 
     async function getUserProfile() {
@@ -101,11 +107,6 @@
 
       document.getElementById('accessToken').append(liff.getAccessToken())
 
-      // document.getElementById('type').append(liff.getType())
-      // document.getElementById('viewType').append(liff.getViewType())
-      // document.getElementById('utouId').append(liff.getUtouId())
-      // document.getElementById('roomId').append(liff.getRoomId())
-      // document.getElementById('groupId').append(liff.getGroupId())
       // document.getElementById('friendship').append(liff.getFriendship())
       // document.getElementById('scanCode').append(liff.getScanCode())
       // document.getElementById('isLoggedIn').append(liff.isLoggedIn())
@@ -118,7 +119,7 @@
       await liff.init({ liffId: "1655687710-zDOqxRR7" })
       getEnvironment()
       getUserProfile()
-      // getContext()
+      getContext()
       // getFriendship()
       // createUniversalLink()
     }
