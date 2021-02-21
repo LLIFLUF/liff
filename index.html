@@ -75,12 +75,41 @@
     }
 
     function getEnvironment() {
+      document.getElementById('os').append(liff.getOS())
+      document.getElementById('language').append(liff.getLanguage())
+      document.getElementById('version').append(liff.getVersion())
+      document.getElementById('isInClient').append(liff.getIsInClient())
+
+      if (liff.getIsInClient()) {
+        document.getElementById('btnLogOut').style.display = 'none'
+        document.getElementById('btnShare').style.display = 'none'
+      } else {
+        document.getElementById('btnMsg').style.display = 'none'
+        document.getElementById('btnScanCode').style.display = 'none'
+        document.getElementById('btnClose').style.display = 'none'
+      }
+
+      document.getElementById('accessToken').append(liff.getAccessToken())
+      document.getElementById('pictureUrl').append(liff.getPictureUrl())
+      document.getElementById('userId').append(liff.getUserId())
+      document.getElementById('displayName').append(liff.getDisplayName())
+      document.getElementById('statusMessage').append(liff.getStatusMessage())
+      document.getElementById('type').append(liff.getType())
+      document.getElementById('viewType').append(liff.getViewType())
+      document.getElementById('utouId').append(liff.getUtouId())
+      document.getElementById('roomId').append(liff.getRoomId())
+      document.getElementById('groupId').append(liff.getGroupId())
+      document.getElementById('friendship').append(liff.getFriendship())
+      document.getElementById('scanCode').append(liff.getScanCode())
+      document.getElementById('isLoggedIn').append(liff.getIsLoggedIn())
+      document.getElementById('universalLink1').append(liff.getUniversalLink1())
+      document.getElementById('universalLink2').append(liff.getUniversalLink2())
     }
 
     async function main() {
       alert("LIFF for Lifluf 🦖")
       await liff.init({ liffId: "1655687710-zDOqxRR7" })
-      // getEnvironment()
+      getEnvironment()
       // getUserProfile()
       // getContext()
       // getFriendship()
