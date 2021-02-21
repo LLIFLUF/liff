@@ -42,6 +42,11 @@
     console.log("Hello World!")
   </script> -->
 
+  <script>
+    const timestamp = new Date().getTime()
+    document.write(`<link rel="stylesheet" href="css/style.css?cache=${timestamp}">`)
+  </script>
+
   <script src="https://static.line-scdn.net/liff/edge/versions/2.8.0/sdk.js"></script>
   <script>
     function createUniversalLink() {
