@@ -78,15 +78,15 @@
       document.getElementById('os').append(liff.getOS())
       document.getElementById('language').append(liff.getLanguage())
       document.getElementById('version').append(liff.getVersion())
-      document.getElementById('isInClient').append(liff.getIsInClient())
+      document.getElementById('isInClient').append(liff.isInClient())
 
       if (liff.getIsInClient()) {
-        document.getElementById('btnLogOut').style.display = "none"
-        document.getElementById('btnShare').style.display = "none"
+        document.getElementById('btnLogOut').style.display = 'none'
+        document.getElementById('btnShare').style.display = 'none'
       } else {
-        document.getElementById('btnMsg').style.display = "none"
-        document.getElementById('btnScanCode').style.display = "none"
-        document.getElementById('btnClose').style.display = "none"
+        document.getElementById('btnMsg').style.display = 'none'
+        document.getElementById('btnScanCode').style.display = 'none'
+        document.getElementById('btnClose').style.display = 'none'
       }
 
       // document.getElementById('accessToken').append(liff.getAccessToken())
@@ -101,7 +101,7 @@
       // document.getElementById('groupId').append(liff.getGroupId())
       // document.getElementById('friendship').append(liff.getFriendship())
       // document.getElementById('scanCode').append(liff.getScanCode())
-      // document.getElementById('isLoggedIn').append(liff.getIsLoggedIn())
+      // document.getElementById('isLoggedIn').append(liff.isLoggedIn())
       // document.getElementById('universalLink1').append(liff.getUniversalLink1())
       // document.getElementById('universalLink2').append(liff.getUniversalLink2())
     }
@@ -110,7 +110,7 @@
       alert("LIFF for Lifluf 🦖")
       await liff.init({ liffId: "1655687710-zDOqxRR7" })
       getEnvironment()
-      // getUserProfile()
+      getUserProfile()
       // getContext()
       // getFriendship()
       // createUniversalLink()
