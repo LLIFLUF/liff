@@ -72,9 +72,9 @@
       const context = liff.getContext()
       document.getElementById('type').append(context.type)
       document.getElementById('viewType').append(context.viewType)
-      document.getElementById('utouId').append(context.utouId)
-      document.getElementById('roomId').append(context.roomId)
-      document.getElementById('groupId').append(context.groupId)
+      document.getElementById('utouId').append(context.utouId) // chat 1-on-1
+      document.getElementById('roomId').append(context.roomId) // room chat
+      document.getElementById('groupId').append(context.groupId) // group chat
     }
 
     async function getUserProfile() {
